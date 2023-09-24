@@ -1,25 +1,45 @@
+/* imported font from google fonts  */
+  @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
 /* Reset Styles */
 
 body {
     background: scroll;
        margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Lobster Two', cursive;
+   
+    /* font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     color: #505050;
-    background:linear-gradient(50deg, rgba(2,0,36,1) 6%, rgba(12,188,255,1) 100%);
+    /*background:linear-gradient(50deg, rgb(227, 227, 231) 6%, rgb(193, 226, 240) 100%);*/
+    background-image: url("images/background.jpg");
 }
 
 
 /* Header Styles */
 header {
-    background-color:#044d68;
-    color: #fff;
+    position: sticky;
+    top:0px;
+    /* margin-top:20px; */
+    /* margin-bottom: 20px; */
+    /* background-color:rgb(17, 147, 223,0.7); */
+    color: #fafcff;
+    background-color: #042957b7;
+    opacity: 0.9;
     text-align: center;
-    padding: 20px;
+   
+   
+
+    /*position: fixed;*/
 }
 
 .headeraH1 {
-    margin: 0;
+
+    margin:0;
+    text-align:center; 
+    font-family: 'Lora', serif;
+    padding: 10px; 
 }
 
 .banner {
@@ -36,12 +56,14 @@ header {
 
 /* Navigation Styles */
 nav ul {
-    background-color: #021e31;
-    color: #fff;
+    /* background-color: #080808; */
+    /* opacity: 0.6; */
+    color:#000000 ;
     text-align: center;
     list-style-type: none;
-    margin: 0;
-    padding: 20px;
+    margin-top:30px;
+    margin-bottom: 10px;
+    padding: 18px;
 }
 
 nav li {
@@ -49,9 +71,11 @@ nav li {
 }
 
 nav a {
-    display: block;
-    color: #fff;
+    font-family: 'Lora', serif;
+    color: #000;
     text-align: center;
+    font-size:22px;
+    font-weight:bolder;
     padding: 14px 16px;
     text-decoration: none;
     transition: background-color 0.3s;  /* Smooth transition for hover effect */
