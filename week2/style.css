@@ -126,22 +126,25 @@ main h3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
 }
 
 .service-column {
-    flex-basis: calc(25% - 20px);
-    max-width: calc(25% - 20px);
+    flex-basis: calc(50% - 800px);
+    max-width: calc(50% - 800px);
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
     text-align: center;
+   
 }
 
 .service-column img {
     width: 180px;
     height: auto;
     margin-bottom: 10px;
+    row-gap: 20px;
+    column-gap: 20px;
 }
 
 .service-column h3 {
@@ -166,26 +169,43 @@ main h3 {
 /* Call to Action Styles */
 .cta-container {
     text-align: center;
-    padding: 20px;
-    background-color: #f5f5f5;
-    margin-top: 30px;
+    font-size:25px;
+    padding: 10px;
+    background-color:#80edacb4;
+    margin-top:20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #08223f;
+    font-weight:30px;
 
+}
+/* Changing properties of cta header */
+.cta-container h2{
+    text-transform: uppercase;
+    color:#03063e;
+    padding-bottom:3px;
+    text-decoration:underline;
 }
 
 .cta-button {
    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
+    padding: 10px 10px;
+    background-color: #7700ff;
     color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
+    text-decoration:none;
+    border-radius: 4px;
     font-weight: bold;
-    margin-top: 15px;
+    margin: 5px;
     transition: background-color 0.3s;
+    border: 50px single #070707;
+    font-size :20px;
+
 }
 
 .cta-button:hover {
-    background-color: #7640B3;
+    background-color: #08223f;
 }
 
 /* Footer Styles */
