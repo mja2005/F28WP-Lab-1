@@ -114,7 +114,6 @@ main {
     padding: 2rem;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    background-color: #aeebfb;
 }
 
 main h3 {
@@ -126,14 +125,14 @@ main h3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
 }
 
 .service-column {
-    flex-basis: calc(50% - 800px);
-    max-width: calc(50% - 800px);
+    flex-basis: calc(50% - 50px);
+    max-width: calc(50% - 50px);
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     text-align: center;
    
@@ -143,8 +142,6 @@ main h3 {
     width: 180px;
     height: auto;
     margin-bottom: 10px;
-    row-gap: 20px;
-    column-gap: 20px;
 }
 
 .service-column h3 {
