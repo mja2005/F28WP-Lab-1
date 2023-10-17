@@ -1,0 +1,246 @@
+/* imported font from google fonts  */
+  @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* Reset Styles */
+
+
+body {
+    background: scroll;
+       margin: 0;
+    padding: 0;
+    font-family: 'Lobster Two'; /*change the font */
+    font-size: large;
+    color: #505050;
+    background-image: url("images/background.jpg");
+}
+
+
+/* Header Styles */
+header {
+    position: sticky;
+    top:0px;
+    color: #fafcff;
+    font-weight:bolder;
+    background-color: #042957b7;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.headeraH1 {
+
+    margin:0;
+    text-align:center; 
+    font-family: 'Lora', serif;
+    padding: 10px; 
+}
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+    border-radius:50%;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+   
+}
+
+
+
+/* Navigation Styles */
+nav ul {
+    color:#000000 ;
+    text-align: center;
+    list-style-type: none;
+    margin-top:30px;
+    margin-bottom: 10px;
+    padding: 18px;
+
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    font-family: 'Lora', serif;
+    color: #000;
+    text-align: center;
+    font-size:20px;
+    font-weight:bolder;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;  /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    background-color: #505050;  /* Darker shade for hover */
+}
+nav a:active{
+    background-color:#7640B3; /* Shows the active page in the navigation bar*/
+    color:white;
+}
+
+/* Banner Styles */
+.banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+.banner-container img{
+    border-radius: 2%;
+    opacity: 0.8;
+}
+
+.centered-banner {
+    padding: 30px;
+    max-width: 80%;
+    height: auto;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-style:solid;
+    border-width :9px;
+    border-color: #b5e6e7;
+  
+}
+
+.services {
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color:rgb(209, 240, 249);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+main h3 {
+    margin-top: 20px;
+}
+
+/* Service Columns */
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-column {
+    flex-basis: calc(50% - 50px);
+    max-width: calc(50% - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.service-column img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.service-column h3 {
+    margin-bottom: 5px;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 800px) {
+    .service-column {
+        flex-basis: calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 700px) {
+    .service-column {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+    
+
+/* Call to Action Styles */
+.cta-container {
+    text-align: center;
+    font-size:25px;
+    padding: 10px;
+    background-color:#80edacb4;
+    margin-top:20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #08223f;
+    font-weight:30px;
+
+}
+/* Changing properties of cta header */
+.cta-container h2{
+    text-transform: uppercase;
+    color:#03063e;
+    padding-bottom:3px;
+    text-decoration:underline;
+}
+
+.cta-button {
+   display: inline-block;
+    padding: 10px 10px;
+    background-color: #7700ff;
+    color: #ffffff;
+    text-decoration:none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin: 5px;
+    transition: background-color 0.3s;
+    border: 50px single #070707;
+    font-size :20px;
+
+}
+
+.cta-button:hover {
+    background-color: #08223f;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer ul {
+    margin: 0;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;  /* Smooth transition for hover effect */
+}
+
+footer a:hover {
+    color: #b3b3b3;  /* Lighter color on hover */
+}
+
+footer p {
+    margin: 10px 0 0;
+}

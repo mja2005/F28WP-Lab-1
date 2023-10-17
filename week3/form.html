@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form - Wanderlust Voyages</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Style for the form: setting width, auto margin for centering, padding,
+background color, border radius for rounded corners, and font size */
+*{
+  box-sizing: border-box;
+}
+#form {
+width: 300px;
+margin: 20vh auto 0 auto; /* This centers the form vertically and
+horizontally */
+padding: 20px;
+background-color: whitesmoke; /* Light gray background for the form */
+border-radius: 4px; /* Rounded corners for the form */
+font-size: 12px;
+}
+/* Style for the form's heading: setting the text color and alignment */
+#form h1 {
+color: #0f2027; /* Dark text color for the heading */
+text-align: center; /* Center-align the heading */
+}
+/* Style for the form's button: padding, top margin, full width, text color,
+background color, no border, and rounded corners */
+#form button {
+padding: 10px;
+margin-top: 10px; /* Space above the button */
+width: 100%; /* Make the button expand the full width of the form */
+color: white; /* White text color for the button */
+background-color: rgb(41, 57, 194); /* Blue background color for the button
+*/
+border: none; /* Remove the default border */
+border-radius: 4px; /* Rounded corners for the button */
+}
+/* Container for input fields: using flexbox for layout, column direction */
+.input-control {
+display: flex;
+flex-direction: column; /* Stack the children (label, input, error message)
+vertically */
+}
+/* Style for input fields inside the container: border style, rounded corners,
+block-level display, font size, padding, full width */
+.input-control input {
+border: 2px solid #f0f0f0; /* Light gray border for the inputs */
+border-radius: 4px; /* Rounded corners for the inputs */
+display: block; /* Display input field as a block */
+font-size: 12px; /* Text size within the input field */
+padding: 10px; /* Space inside the input field */
+width: 100%; /* Input field takes up 100% of the form's width */
+}
+/* Remove focus outline from input fields */
+.input-control input:focus {
+outline: 0; /* Remove outline when input is focused */
+}
+/* Style for input fields with class "success": green border */
+.input-control.success input {
+border-color: #09c372; /* Green border to indicate successful input */
+}
+/* Style for input fields with class "error": red border */
+.input-control.error input {
+border-color: #ff3860; /* Red border to indicate an error in input */
+}
+/* Style for the error message: text color, font size, and height */
+.input-control .error {
+color: #ff3860; /* Red text color for error messages */
+font-size: 9px; /* Smaller font size for error messages */
+height: 13px; /* Explicit height to ensure consistent spacing */
+}
+</style>
+ 
+</head>
+<body>
+  <!--Form with varoius inputs-->
+  <form id="form" action="/">
+    <div class="input-control">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+      <div class="error"></div>
+    </div>
+    <div class="input-control">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <div class="error"></div> 
+    </div>
+    <div class="input-control">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <div class="error"></div>
+    </div>
+    <div class="input-control">
+      <label for="password-valid">Password Validation:</label>
+      <input type="password" id="password-valid" name="password-valid">
+      <div class="error"></div>
+    </div>
+    <div class="input-control">
+      <button type="submit" value="Submit">Submit</button>
+      <div class="error"></div>
+    </div>
+  </form>
+  <script>
+    //get the form element 
+    const form = document.getElementById("form");
+    const username=document.getElementById("username");
+    const email=document.getElementById("email");
+    const password=document.getElementById("password");
+    const passwordValid=document.getElementById("password-valid");
+    //event listener for the form on submit event 
+    form.addEventListener("submit",event => {
+      event.preventDefault(); //prevents the form from submitting and refreshing
+
+      validateInputs(); //call the function to validate the inputs.
+
+    });
+
+  //function to display error message and apply error style 
+  const setError= (element,message)=>{
+    const inputControl=element.parentElement; //gets the parent elemet of the input 
+    const errorDisplay=inputControl.querySelector(".error");
+    errorDisplay.innerText=message; //sets the error message
+    inputControl.classList.add("error"); //adds the error class to the parent
+    inputControl.classList.remove("success"); //Removes the 'success' class from the parent 
+  };
+  //Function to indicat the success by removing error message and applying success styles
+  const setSuccess= element =>{
+    const inputControl=element.parentElement; //gets the parent elemt of the input 
+    const errorDisplay=inputControl.querySelector(".error");
+    errorDisplay.innerText=" "; //sets the error message
+    inputControl.classList.add("success"); //adds the error class to the parent
+    inputControl.classList.remove("error"); //Removes the 'success' class from the parent 
+  };
+  // main function to validate inputs
+  const validateInputs= () =>{
+    //trimming whitespaces from all the inputs and assigning the values to variables
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim(); 
+    const passwordValue = password.value;
+    const passwordValidValue = passwordValid.value;
+    //variable that checks the format of email
+    const formatEmail = /\S+@\S+\.\S+/;
+  
+    if(usernameValue === ''){
+      setError(username,"Username is required");// Calls function to set error message
+    }
+    else{
+      setSuccess(username); //Calls function to set success message
+    }
+    
+
+    if(emailValue === ''){
+      setError(email,"Email is required");// Calls function to set error message
+    }
+    if(!emailValue.match(formatEmail)){
+      setError(email,"Enter the correct format");}
+    else{
+      setSuccess(email); //Calls function to set success message
+    }
+    
+    if(passwordValue === ''){
+      setError(password,"Password is required");// Calls function to set error message
+      }
+    if (passwordValue.length < 8){
+        setError(password,"Password should be minimum 8 character");
+      }
+
+    else{
+      setSuccess(password); //Calls function to set success message
+    }
+   
+    if(passwordValidValue=== ''|| passwordValidValue !== passwordValue){
+      setError(passwordValid,"Password doesnot match");// Calls function to set error message
+    }
+  
+    else{
+      setSuccess(passwordValid); //Calls function to set success message
+    }
+
+  };
+
+  </script>
+
+</body>
+</html>
