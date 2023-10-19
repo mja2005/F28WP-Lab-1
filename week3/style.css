@@ -96,7 +96,7 @@ nav a:active{
 .banner-container img{
     border-radius: 2%;
     opacity: 0.8;
-    animation: scaleAnimation 2s alternate ifinite; 
+    animation: scaleAnimation 3s alternate infinite; 
 }
 
 .centered-banner {
