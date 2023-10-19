@@ -6,7 +6,9 @@ imported google fonts and applied to the body and header.
  * style.css changed for CTA section
  * completed  all  3 tasks from the task page of travel agency.
  * Dispalyed two pictures per row for "Our Service Container".
-week 3-
+
+
+*week 3-
 Added an Image carousel slider for the banner in index.html which changes the images within the time set.
 *The slider uses the images download from Canva.
 * In Javascript
