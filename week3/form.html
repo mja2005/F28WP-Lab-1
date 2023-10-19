@@ -12,7 +12,7 @@ background color, border radius for rounded corners, and font size */
   box-sizing: border-box;
 }
 #form {
-width: 300px;
+width: 600px;
 margin: 20vh auto 0 auto; /* This centers the form vertically and
 horizontally */
 padding: 20px;
@@ -75,7 +75,7 @@ height: 13px; /* Explicit height to ensure consistent spacing */
  
 </head>
 <body>
-  <!--Form with varoius inputs-->
+  <!--Form with various inputs-->
   <form id="form" action="/">
     <div class="input-control">
       <label for="username">Username:</label>
@@ -103,7 +103,7 @@ height: 13px; /* Explicit height to ensure consistent spacing */
     </div>
   </form>
   <script>
-    //get the form element 
+    //get the form elements 
     const form = document.getElementById("form");
     const username=document.getElementById("username");
     const email=document.getElementById("email");
@@ -135,42 +135,44 @@ height: 13px; /* Explicit height to ensure consistent spacing */
   };
   // main function to validate inputs
   const validateInputs= () =>{
-    //trimming whitespaces from all the inputs and assigning the values to variables
+    //trimming whitespaces from username and email the inputs and assigning the values to variables
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim(); 
     const passwordValue = password.value;
     const passwordValidValue = passwordValid.value;
     //variable that checks the format of email
     const formatEmail = /\S+@\S+\.\S+/;
-  
+  //validation for username 
     if(usernameValue === ''){
       setError(username,"Username is required");// Calls function to set error message
     }
     else{
       setSuccess(username); //Calls function to set success message
     }
-    
 
+  // Validation for email
     if(emailValue === ''){
       setError(email,"Email is required");// Calls function to set error message
     }
     if(!emailValue.match(formatEmail)){
-      setError(email,"Enter the correct format");}
+      setError(email,"Enter the correct format");}// Calls function to set error message for invalid format
     else{
       setSuccess(email); //Calls function to set success message
     }
-    
+
+    //validation for Password 
     if(passwordValue === ''){
       setError(password,"Password is required");// Calls function to set error message
       }
     if (passwordValue.length < 8){
-        setError(password,"Password should be minimum 8 character");
+        setError(password,"Password should be minimum 8 character");// Calls function to set error message
       }
 
     else{
       setSuccess(password); //Calls function to set success message
     }
-   
+
+    //Validation for Password validation
     if(passwordValidValue=== ''|| passwordValidValue !== passwordValue){
       setError(passwordValid,"Password doesnot match");// Calls function to set error message
     }
