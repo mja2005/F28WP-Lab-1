@@ -96,6 +96,7 @@ nav a:active{
 .banner-container img{
     border-radius: 2%;
     opacity: 0.8;
+    animation: scaleAnimation 2s alternate ifinite; 
 }
 
 .centered-banner {
@@ -103,6 +104,7 @@ nav a:active{
     max-width: 80%;
     height: auto;
 }
+
 
 /* Main Content Styles */
 main {
@@ -169,6 +171,16 @@ main h3 {
         max-width: 100%;
     }
 }
+/* Animation queries for banner*/
+
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(1); /* Initial scale */
+    }
+    100% {
+        transform: scale(1.2); /* Scale up by 20% */
+    }
+}
 
     
 
@@ -214,37 +226,6 @@ main h3 {
     background-color: #08223f;
 }
 
-/* modal pop up*/
-/* Modal Container */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    z-index: 1;
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #fff;
-    margin: 10% auto; /* Center the modal vertically and horizontally */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    max-width: 400px;
-  }
-  
-  /* Close Button */
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-  }
 
 /* Footer Styles */
 footer {
