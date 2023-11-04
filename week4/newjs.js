@@ -14,7 +14,7 @@ btn.addEventListener("click", function() {
   var ourRequest = new XMLHttpRequest();
 
   // Configure the GET request with the URL of our data. We're using the pageCounter to load different pages of data.
-  ourRequest.open('GET', 'https://salma-s-hw.github.io/F28WP-lab/cities' + pageCounter + '.json');
+  ourRequest.open('GET', 'https://mja2005.github.io/F28WP-Lab-1/cities' + pageCounter + '.json');
 
   // Set up a function to run when the request is successfully completed.
   ourRequest.onload = function() {
