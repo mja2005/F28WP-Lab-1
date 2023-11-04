@@ -3,7 +3,7 @@ var btn = document.getElementById("btn");
 btn.addEventListener("click", function(){
 
   var ourRequest = new XMLHttpRequest();
-  ourRequest.open('GET', 'https://github.com/mja2005/F28WP-Lab-1/blob/main/week4/cities1.json');
+  ourRequest.open('GET', 'https://mja2005.github.io/F28WP-Lab-1/cities1.json');
   
   ourRequest.onload = function() {
     var ourData = JSON.parse(ourRequest.responseText);
@@ -44,3 +44,4 @@ htmlString += '. & enjoy outdoor places like: ';
   cityContainer.insertAdjacentHTML('beforeend' , htmlString);
 
 }
+//https://mja2005.github.io/F28WP-Lab-1/cities1.json
