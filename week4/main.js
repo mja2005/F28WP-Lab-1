@@ -44,4 +44,3 @@ htmlString += '. & enjoy outdoor places like: ';
   cityContainer.insertAdjacentHTML('beforeend' , htmlString);
 
 }
-//https://mja2005.github.io/F28WP-Lab-1/cities1.json
