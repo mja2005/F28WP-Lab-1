@@ -54,8 +54,8 @@ function renderHTML(data,city){
     var htmlString = "";
     // adding all the values to Html string 
     htmlString += "<p>" + "The weather of " + city + " is " + weatherDescription + ".</br> The temperature is " + mainTemperature + "°C with a wind speed of " + windSpeed + "m/s.</p>";
-    //Insert the HTML into our weatherInfo container , just before the end of its content.
-    weatherInfo.insertAdjacentHTML('beforeend', htmlString);}
+    //Insert the HTML into our weatherInfo container , just before the end of its content.The html contains the string and a horizontal line .
+    weatherInfo.insertAdjacentHTML('beforeend', htmlString+ '<hr width =50% />');}
 else{
     // error message for API error 
     alert("API error:"+ data.message);
