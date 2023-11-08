@@ -32,3 +32,24 @@ Creating form.html
 * setSuccess= (element) function is called when the input is valid .It adds the class .sucess and removes the class .error.
 * If any of the input is invalid the input box will become red and if  the input is correct the box will change to green.
 * The the submit button will only work when all the input box are green.
+
+
+*Week 4- 
+* index.html file includes the basic layout of the Weather Finder , css.css file ans the app.js file.
+* css.css file contains the syling of the website.
+* app.js -
+  ** Javascript code added  to get the weather,temperature and windseepd of a given city.
+  ** getting the API code  from the OpenWeatherMap 
+  ** Added a function to the button which on click will send an XML request to the server , get the link with the city input, API key and converting the temp to celcius.
+  ** Parsing the data from the JSON file.
+  ** renderHtml function takes the data from the Json files and the city name as the arguments. Gets the required data ,stores it in variables and insert it in the Html.
+  ** Error condition checked
+  • HTTP Status Code Error- when ourRequest.Status is not between 200 and 400 
+  • API-Specific Error - when the data.cod is not equal to  200 
+  • Network Error - ourRequest.onerror  runs a function  when we have network error
+  * Run the html page on the browser .On entering a city name the city name,weather,temp in C and windspped in m/s is displayed.
+  * write another city name and the information will be displayed below speration them with a horizontal line 
+
+* 
+
+*
