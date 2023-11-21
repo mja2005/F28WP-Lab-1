@@ -108,7 +108,7 @@ exports.profile = (req, res) => {
   exports.logout = (req, res) => {
     console.log(req); // Log the entire request object to the console
 
-    // Perform any logout logic (e.g., destroy session, clear cookies) if needed
+    // logout 
     if (req.session) {
         req.session.destroy();
     }
