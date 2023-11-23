@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-
+        T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .card-text{
+            font-size:20px;
+        }
+        .card-title{
+            text-align: center;
+        }
+    </style>
+    <title>User Authentication System</title>
+</head>
+
+<body>
+    <nav>
+        <h1>User Authentication System With Node and Mysql</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/auth/logout">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="avatar-ctn">
+                        <img src="/avatar.png" class="avatar" alt="user profile picture" />
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{user.name}}</h3>
+                        <p class="card-text1">Some quick text examples to build up your card title and make up your card content.You can add new text for the content </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Profile Page
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Hey {{user.name}}, welcome back</h2>
+                        <br>
+                        <p class="card-text">This is your profile page where <br>you can add all the information about
+                            yourself</p>
+                        <div class="container mt-4">
+
+                            <a href="#" class="btn btn-primary">Edit your Profile</a>
+                            <br>
+                            <br>
+                            <br>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <td><b>Attributes </b></td>
+                                    <td><b>Values</b></td>
+                                    <tr>
+                                        <th>ID</th>
+                                        <td>{{user.id}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Name</th>
+                                        <td>{{user.name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Email</th>
+                                        <td>{{user.email}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Node MySQL - Project
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-
+    C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
