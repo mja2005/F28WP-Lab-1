@@ -51,4 +51,13 @@ Creating form.html
   * write another city name and the information will be displayed below speration them with a horizontal line 
 
 * Week 5
-*
+*  installed and loaded express for the generating HTML and use other inbuild modules.
+*  Created a database in mysql.Created a table "USERS" ,containing id,name,email and passwords.
+* Create index.js. Set up Express to Use Handlebars as templating engine .Use dotenv to manage database credentials.
+* create a folder routes which containd auth.js and pages.js to implement routes for  /register, /login,/profile and /logout.
+* Create views folder.It contains all the .hbs files of resister,login,logout,profile pages.
+* Use bcrypt to hash ans salt the  passwords before storing them in the database.
+* Create controller folder which performs the function specific to the pages ,send response and renders it on the pages.
+* ADDITIONAL TASK
+* creating a isLoggedIn middleware function which  uses JWT (JSON Web Tokens) for authentication.
+* after the authentication tokens are created and display the Mysql data of user who logged in .
