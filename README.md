@@ -60,4 +60,5 @@ Creating form.html
 * Create controller folder which performs the function specific to the pages ,send response and renders it on the pages.
 * ADDITIONAL TASK
 * creating a isLoggedIn middleware function which  uses JWT (JSON Web Tokens) for authentication.
+* VIDEO ADDED IN WEEK  5 FOLDER
 * after the authentication tokens are created and display the Mysql data of user who logged in .
